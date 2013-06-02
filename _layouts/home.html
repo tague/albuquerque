@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="author" content="{{ site.author }}" />
+  <meta name="description" content="{{ site.description }}" />
+
+  <link rel="stylesheet" href="css/base.css" type="text/css" media="screen, projection" />  
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,700,400,300' type='text/css'>
+
+  <!--[if lt IE 9]><script src="http://htmp5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
+
+  <title>{% if page.title %} {{ page.title }} &ndash; {% endif %} {{ site.name }} </title>
+  {% if site.google_analytics_tracking_id %}
+  <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{site.google_analytics_tracking_id}}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+  </script>
+  {% endif %}  
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <section class="name">
+        <a href="{{site.url}}">{{site.firstname}}<b>{{site.lastname}}</b></a>
+      </section>
+	  	
+	  <nav>
+		<ul class="menu">
+        	<li><a href="index.html">About</a></li>
+        	<li><a href="projects.html">Projects</a></li>
+        	<li><a href="{{site.blog_url }}">Blog</a></li>
+        	<li><a href="colophon.html">Colophon</a></li>
+      	</ul>
+	  </nav>
+	
+	  <section class="social">
+	  	<ul class="social">
+	    	<li><a href="http://www.flickr.com/photos/{{ site.flickr }}" target="_blank"><img src="images/flickr.png"></a></li>
+	    	<li><a href="https://github.com/{{ site.github }}" target="_blank"><img src="images/github.png"></a></li>
+    		<li><a href="https://twitter.com/{{ site.twitter }}" target="_blank"><img src="images/twitter.png"></a></li>
+      	</ul>
+   	  </section>
+   </div>
+  </header>
+
+  <div class="hero" style="background-image: url({{ page.hero_img_url }} );"></div>
+
+  <section class="container content">
+   <section class="container content">
+  	
+  	{{ content }}
+  	
+	 </section>
+   </section>
+   
+   </body>
+</html>

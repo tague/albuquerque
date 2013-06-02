@@ -1,0 +1,20 @@
+markdown: rdiscount
+pygments: false
+permalink: /posts/:title
+rdiscount:
+  extensions: [smart]
+  
+name:
+firstname:
+lastname: 
+author:   
+url:
+description:
+twitter:
+github:
+flickr: 
+blog_url: 
+homepage_url:
+gravatar_url:
+base_url: 
+google_analytics_tracking_id:
